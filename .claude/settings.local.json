@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm create:*)",
+      "Bash(npx --yes create-vite@latest midcity-react-app --template react)",
+      "Bash(npm install:*)",
+      "Bash(npx tailwindcss init:*)",
+      "Bash(npm run build:*)",
+      "Bash(dir /s \"C:\\\\Users\\\\itimu\\\\Downloads\\\\MidcityApps\")",
+      "Bash(dir:*)",
+      "Bash(node scripts/importStay.js:*)",
+      "Bash(node -e \"\nimport { initializeApp } from ''firebase/app'';\nimport { getFirestore, collection, getDocs, updateDoc } from ''firebase/firestore'';\n\nconst app = initializeApp\\({\n  apiKey: ''AIzaSyCP_EHp-NdHnwyOZ49_OOEiqLUBV2irgeg'',\n  authDomain: ''admin-17c3d.firebaseapp.com'',\n  projectId: ''admin-17c3d'',\n  storageBucket: ''admin-17c3d.appspot.com'',\n  messagingSenderId: ''456331474186'',\n  appId: ''1:456331474186:web:0385a740d37862f82af6f3'',\n}\\);\nconst db = getFirestore\\(app\\);\n\nconst snap = await getDocs\\(collection\\(db, ''stay''\\)\\);\nfor \\(const doc of snap.docs\\) {\n  const data = doc.data\\(\\);\n  if \\(data.name === ''Holiday Inn''\\) {\n    await updateDoc\\(doc.ref, { discount: ''$120/ Night'' }\\);\n    console.log\\(''Fixed Holiday Inn discount''\\);\n  }\n}\nprocess.exit\\(0\\);\n\")",
+      "Bash(node scripts/fixHolidayInn.js:*)",
+      "Bash(gh repo view:*)",
+      "WebFetch(domain:api.github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)"
+    ]
+  }
+}
